@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="80dp"
+    android:background="#dd33e1b5">
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/list"></ListView>
+
+    <ImageView
+
+        android:id="@+id/IV"
+        android:layout_width="100dp"
+        android:layout_height="75dp"
+        android:layout_alignParentLeft="true"
+        android:src="@drawable/nehra"
+        ></ImageView>
+    <TextView
+        android:id="@+id/movie_title1"
+        android:layout_width="175dp"
+        android:layout_height="75dp"
+        android:layout_toRightOf="@+id/IV"
+        android:text="this is csk"
+        android:gravity="center"/>
+    <TextView
+        android:id="@+id/rating"
+        android:layout_width="wrap_content"
+        android:layout_height="75dp"
+        android:text="this is it"
+        android:gravity="center"
+        android:layout_alignParentRight="true"
+        android:layout_toRightOf="@+id/IV"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#FFFFFF"
+        android:layout_below="@+id/movie_title">
+
+    </View>
+
+</RelativeLayout>

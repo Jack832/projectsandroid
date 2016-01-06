@@ -1,0 +1,42 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.test4.swipe.MainActivity">
+    <item
+        android:id="@+id/action_settings"
+        android:orderInCategory="100"
+        android:title="@string/action_settings"
+        app:showAsAction="never" />
+    <item android:id="@+id/status"
+        android:title="status">
+
+    </item>
+    <item android:id="@+id/profile_pic"
+        android:title="profile"
+       >
+
+    </item>
+    <item android:id="@+id/upgrade"
+        android:title="upg">
+
+    </item>
+    <item
+        android:id="@+id/main"
+        android:title="chats"
+
+        android:actionViewClass="android.widget.SearchView"
+        android:showAsAction="always"
+        android:actionLayout="@layout/search"
+        >
+
+    </item>
+    <item
+        android:id="@+id/main1"
+        android:orderInCategory="100"
+        android:title="chat"
+        android:icon="@drawable/wifi"
+        android:showAsAction="always"
+        >
+
+    </item>
+</menu>
