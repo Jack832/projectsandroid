@@ -23,11 +23,21 @@
 
 
         </activity>
-        <activity android:name=".Display"></activity>
+        <activity android:name=".Display"
+            android:parentActivityName=".MainActivity">
+        </activity>
 
-        <activity android:name=".Confirm"></activity>
+        <activity android:name=".Confirm"
+            android:parentActivityName=".MainActivity">
+        </activity>
 
-        <activity android:name=".Sett"></activity>
+        <activity android:name=".Sett"
+            android:parentActivityName=".MainActivity">
+
+        </activity>
+        <activity android:name=".Edit"
+            android:parentActivityName=".MainActivity">
+        </activity>
     </application>
 
 </manifest>

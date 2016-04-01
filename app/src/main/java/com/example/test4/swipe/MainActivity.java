@@ -12,6 +12,7 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 
+import android.support.v4.app.NavUtils;
 import android.support.v4.view.MenuItemCompat;
 import android.support.v4.view.ViewPager;
 
@@ -56,6 +57,7 @@ public class MainActivity extends FragmentActivity implements ActionBar.TabListe
         pager = (ViewPager) findViewById(R.id.pager);
         adapter = new TabsPagerAdapter(getSupportFragmentManager());
         pager.setAdapter(adapter);
+
 
 
         Resources res= getResources();
@@ -109,7 +111,7 @@ public class MainActivity extends FragmentActivity implements ActionBar.TabListe
     {
         super.onCreateOptionsMenu(menu);
         getMenuInflater().inflate(R.menu.menu_main, menu);
-        menuitem =menu.findItem(R.id.main);
+            menuitem =menu.findItem(R.id.main);
        // requestWindowFeature(getWindow().FEATURE_NO_TITLE);
         //SearchManager search= (SearchManager)MainActivity.this.getSystemService(getBaseContext().SEARCH_SERVICE);
         SearchView searchView = (SearchView) menu.findItem(R.id.main).getActionView();
@@ -120,6 +122,8 @@ public class MainActivity extends FragmentActivity implements ActionBar.TabListe
         View searchPlate=searchView.findViewById(searchBarId);
         searchPlate.setBackgroundColor(titlecol);
         searchBar.setLayoutTransition(new LayoutTransition());
+        getActionBar().setDisplayHomeAsUpEnabled(true);
+
         //menuitem.setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
            // @Override
            // public boolean onMenuItemClick(MenuItem item) {
@@ -176,6 +180,7 @@ public class MainActivity extends FragmentActivity implements ActionBar.TabListe
                 menuitem.setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
                  @Override
                  public boolean onMenuItemClick(MenuItem item) {
+                    menuitem.expandActionView();
 
                    return true;
                 }
@@ -198,6 +203,16 @@ public class MainActivity extends FragmentActivity implements ActionBar.TabListe
             case R.id.action_settings:
                 Intent i= new Intent(this,Sett.class);
                 startActivity(i);
+                break;
+            case R.id.upgrade:
+                Intent i1= new Intent(this,Edit.class);
+                startActivity(i1);
+                //if(id == android.R.id.home)
+               // {
+                    //NavUtils.navigateUpFromSameTask(this);
+
+               // }
+                break;
 
 
             //default:
@@ -221,6 +236,7 @@ public class MainActivity extends FragmentActivity implements ActionBar.TabListe
                 startActivity(i);
             }
         }
+
 
 
 
