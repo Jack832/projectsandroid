@@ -6,6 +6,7 @@ android {
 
     defaultConfig {
         applicationId "com.example.test4.swipe"
+        applicationId "com.example.test4.slide"
         minSdkVersion 15
         targetSdkVersion 19
         versionCode 1
